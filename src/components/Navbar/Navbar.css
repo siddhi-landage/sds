@@ -1,0 +1,115 @@
+.navbar{
+    display:flex;
+    justify-content :space-between;
+    align-items: center;
+    width:92vw;
+    margin:1vw 3vw;
+    /* border:1px solid red; */
+    position: relative;
+    z-index: 1; /* Higher z-index to appear above the Header image */
+    /*background-color: rgba(255, 255, 255, 0.8); Optional: Set a transparent background */
+   
+}
+  
+.navbar img:hover {
+  transform:translateY(-2px) scale(1.20);
+}
+.nav-left {
+   display:flex;
+   justify-content:center;
+   align-items : center;
+}
+
+.nav-left img {
+   height:20vh;
+   width:10vw;
+}
+.menu {
+    padding-left:7vw;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    list-style:none;
+    gap : 1.8rem;
+    color: black;
+    font-size:1.9rem;
+ }
+.menu :hover {
+   transform :translateY(-1px) scale(1.10);
+ }
+
+.navbar-right {
+   justify-content:center;
+    display:flex;
+    padding-left :5vw;
+    align-items:center;
+    gap :2.9rem;
+
+}
+.navbar-right img{
+   height:6vh;
+
+}
+.navbar-right img:hover {
+    transform : translateY(-1px) scale(1.15);
+}
+
+.navbar button {
+    background:transparent;
+    font-size:1.5rem;
+    color:#49557e;
+    border: 1px solid tomato;
+    border-radius: 2rem;
+    padding:0.7rem  1.4rem;
+    cursor:pointer;
+    transition: 1s;
+ }
+ .navbar  .active{
+   padding-bottom:2px;
+   border-bottom:2px solid  tomato;
+}
+
+.navbar button:hover {
+    background-color: #fff4f0;
+}
+
+.navbar li {
+    cursor:pointer;
+ }
+
+.bell-icon {
+    position:relative;
+}
+
+.dot{
+   width:10px;
+   height:10px;
+   background-color: tomato;
+   border-radius: 5px;
+   top:-9px;
+   right:-8px;
+   margin:1px;
+ }
+
+@media(max-width : 1050px) {
+   .logo-img {
+      width:140px;
+   }
+   .navbar {
+    width:88vw;
+    margin:0 -4.4vw;
+   }
+   .navbar-menu {
+      gap:20px;
+      font-size:17px;
+   }
+   .navbar-right {
+      gap:30px;
+   }
+   .navbar-right img {
+      width:22px;
+   }
+   .navbar-right button {
+      padding :8px 25px;
+   }
+}
