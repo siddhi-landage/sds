@@ -1,0 +1,38 @@
+.SingleCard {
+    display:flex;
+    flex-direction:column;
+    padding-top:3vh;
+    align-items:center;
+    gap : 1.5vh;
+    height:50vh;
+    width:25vw;
+    border-radius:25px;
+    border:1px solid black;
+    position:relative;
+}
+
+.SingleCard .workerimg {
+    height:20vh;
+    width:20vh;
+    border-radius:50%;
+    object-fit:cover;
+    border:1px solid red;
+
+}
+
+.Info {
+   display:flex;
+   height: 25vh;
+   width: 23vw;
+   justify-content : center;
+   align-items : center;
+   flex-direction : row;
+   /* border:1px solid black; */
+   gap : 1vw;
+}
+
+.Info .other {
+    display:flex;
+    flex-direction:column;
+    gap: 0.6vh;
+}

@@ -1,0 +1,29 @@
+.Contact {
+    display:flex;
+    height: auto;
+    margin-top:77vh;
+    /* border: 1px solid black; */
+    flex-direction:column;
+    position:absolute;
+}
+.Contact .Intro {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+.Contact .Intro h1{
+    font-size:6vh;
+    font-weight:300;
+    color:black;
+}
+.workers-list {
+    margin-top: 3vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    /* border:5px solid red; */
+    gap:5vw;
+
+}

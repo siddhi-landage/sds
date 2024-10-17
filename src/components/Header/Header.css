@@ -1,13 +1,11 @@
 .Header {
     position:absolute;
-    height:120vh;
+    height:100vh;
     width:100vw;
     top:0;
     left:0;
     background-image:url('../../assets/coep hostel.jpg');
     background-size:cover;
-    /* background-position:center; */
     background-repeat:no-repeat;
     z-index:0;
-    /* border: 2px solid black;  */
 }
