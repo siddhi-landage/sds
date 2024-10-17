@@ -1,6 +1,5 @@
 .circle-rate {
     /* border: 2px solid red; */
-    background-color: lightblue;
     border-radius: 50%;
     padding: 5px; /* Increase/decrease padding for circle thickness */
     width: 50px;  /* Set width */
@@ -9,7 +8,7 @@
 }
 
 .CircularProgressbar-text {
-    font-size: 2vw; /* Adjust font size */
+    font-size: 5vw; /* Adjust font size */
     font-weight: 500;
     fill: black;
 }

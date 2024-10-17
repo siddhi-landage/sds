@@ -1,10 +1,10 @@
 .Contact {
     display:flex;
     height: auto;
-    margin-top:77vh;
+    margin-top:102vh;
     /* border: 1px solid black; */
     flex-direction:column;
-    position:absolute;
+    position:relative;
 }
 .Contact .Intro {
     display:flex;

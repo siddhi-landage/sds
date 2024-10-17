@@ -19,7 +19,7 @@ const Navbar = () => {
           <img src={bellicon} alt="bell" /> 
           <div className="dot"></div>
         </div>
-        <button>Sign In</button>
+        {/* <button>Sign In</button> */}
       </div>
     </div>
   );

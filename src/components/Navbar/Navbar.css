@@ -5,7 +5,7 @@
     width:92vw;
     margin:1vw 3vw;
     /* border:1px solid red; */
-    position: relative;
+    position: absolute;
     z-index: 1; 
     top:0;
     left:0;Higher z-index to appear above the Header image
