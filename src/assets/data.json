@@ -1,0 +1,41 @@
+[
+    {
+        "title": "student",
+        "icon": "faUserGraduate", 
+        "isFontAwesome": true,
+        "childrens": [
+            {
+                "title": "Complaints",
+                "icon": "faPen", 
+                "isFontAwesome": true,
+                "path": "/complaint"
+            }
+        ]
+    },
+    {
+        "title": "Worker",
+        "icon": "faPerson", 
+        "isFontAwesome": true,
+        "childrens": [
+            {
+                "title": "Complaints",
+                "icon": "faPen", 
+                "isFontAwesome": true,
+                "path": "/worker/complaint"
+            }
+        ]
+    },
+    {
+        "title": "Worden",
+        "icon": "faPerson", 
+        "isFontAwesome": true,
+        "childrens": [
+            {
+                "title": "DashBoard",
+                "icon":"faChartLine",
+                "isFontAwesome":"true",
+                "path": "/DashBoard"
+            }
+        ]
+    }
+]
