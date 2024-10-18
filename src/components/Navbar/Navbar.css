@@ -104,6 +104,13 @@
    right:-8px;
    margin:1px;
  }
+ 
+.load {
+   background-color : red;
+   z-index :10;
+   color:black;
+   position:relative;
+}
 
 @media(max-width : 1050px) {
    .logo-img {

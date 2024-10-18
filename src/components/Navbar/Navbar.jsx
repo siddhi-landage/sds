@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from '../../assets/coep-removebg-preview.png';
 import bellicon from '../../assets/bell.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import Sidebar from '../Sidebar/Sidebar';
+import Login from '../Login/Login.jsx'
 
-const Navbar = () => {
-  const [showsidebar, setshowsidebar] = useState(false);
+const Navbar = ( {oonShowLogin }) => {
+  const[showLogin, setshowlogin] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log("Login will appear in 1 sec");
+      setshowlogin(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    console.log('showLogin state has changed:', showLogin);
+  }, [showLogin]);
 
   const toggle = () => {
     setshowsidebar(!showsidebar);
   };
 
-  const closeSidebar = () => {
-    setshowsidebar(false); // Function to close the sidebar
+  const handlelogin = () => {
+    setshowlogin(false);
   };
 
   return (
@@ -40,8 +53,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Conditionally render the Sidebar */}
-      {showsidebar && <Sidebar onClose={closeSidebar} />}
+      {showLogin  && <Login onLogin={handlelogin}/>}
     </>
   );
 };
