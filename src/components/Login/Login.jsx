@@ -28,7 +28,7 @@ const Login = ({ onLogin }) => {
             <label>Email</label>
             <input
               type="email"
-              className="form-controlone"
+              className="form-control one"
               placeholder="Enter email"
               value={email}
               onChange={(e) => setemail(e.target.value)}
@@ -80,7 +80,6 @@ const Login = ({ onLogin }) => {
             </p>
           ) : null}
         </form>
-
         {showsidebar && <Sidebar onClose={handleSidebarClose} />}
       </div>
     </div>
