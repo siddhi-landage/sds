@@ -16,6 +16,16 @@
 .navbar img:hover {
   transform:translateY(-2px) scale(1.20);
 }
+.menu li.active, .menu li:hover {
+   padding-bottom: 2px;
+   border-bottom: 1.5px solid black;
+}
+
+/* Additional rule to target the active state */
+.menu li.active {
+   color: tomato;
+}
+
 .nav-left {
    display:flex;
    justify-content:center;
