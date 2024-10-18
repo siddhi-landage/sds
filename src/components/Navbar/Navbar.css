@@ -4,7 +4,6 @@
     align-items: center;
     width:92vw;
     margin:1vw 3vw;
-    /* border:1px solid red; */
     position: absolute;
     z-index: 1; 
     top:0;
@@ -30,6 +29,7 @@
    display:flex;
    justify-content:center;
    align-items : center;
+   /* border:1px solid black; */
 }
 
 .nav-left img {
@@ -53,20 +53,20 @@
 .navbar-right {
    justify-content:center;
     display:flex;
-    padding-left :5vw;
     align-items:center;
-    gap :2.9rem;
-
+    gap:4vw;
+    /* border: 1px solid; */
+    margin-left: 12vw;
 }
 .navbar-right img{
    height:6vh;
-
 }
+
 .navbar-right img:hover {
     transform : translateY(-1px) scale(1.15);
 }
 
-.navbar button {
+/* .navbar button {
     background:sky-blue;
     font-size:1.5rem;
     color:#49557e;
@@ -83,8 +83,10 @@
 
 .navbar button:hover {
     background-color: #fff4f0;
+} */
+.navbar-right .fa-bars{
+    font-size :5.5vh;
 }
-
 .navbar li {
     cursor:pointer;
  }
