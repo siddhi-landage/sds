@@ -43,7 +43,9 @@ const Navbar = () => {
           <img className='navbar-img' src={logo} alt="logo" />
           <ul className='menu'>
             <li>Home</li>
-            <li>Contacts</li>
+            <li> 
+              <a href='#contact'>Team</a>
+             </li>
             <li>Notice Section</li>
             <li>General Discussion</li>
           </ul>

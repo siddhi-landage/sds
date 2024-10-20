@@ -14,7 +14,7 @@ const workers = [
 
 const Contact = () => {
   return (
-    <div className='Contact'>
+    <div className='Contact' id='contact'>
        <div className='Intro'>
           <h1> Our Team memebers:</h1>
           <hr/>
