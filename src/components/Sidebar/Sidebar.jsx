@@ -18,6 +18,7 @@ const Sidebar = ({ onClose }) => {
         {items.map((item, index) => (
           <SidebarItem key={index} item={item} />
         ))} 
+          <button className='logout'> LogOut </button>
       </div>
     </div>
   );

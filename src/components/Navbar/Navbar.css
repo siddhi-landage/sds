@@ -96,11 +96,12 @@
 }
 
 .dot{
+   position:absolute;
    width:10px;
    height:10px;
    background-color: black;
    border-radius: 5px;
-   top:-9px;
+   top:-7px;
    right:-8px;
    margin:1px;
  }

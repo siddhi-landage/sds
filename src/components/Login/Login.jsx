@@ -1,17 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Login.css';
 import Sidebar from '../Sidebar/Sidebar.jsx';
+import { StoreContext } from '../../Context/StoreContext.jsx';
+import axios from "axios";
 
 const Login = ({ onLogin }) => {
   const [showsidebar, setshowsidebar] = useState(false);
-  const [email, setemail] = useState('');
-  const [password, setpassword] = useState('');
-  const [newu, setnewu] = useState(false); // to toggle between login and signup
+  const [currentState, setCurrentState] = useState("login");
 
-  const handlesubmit = (e) => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: ""
+  });
+
+  const { url, settoken } = useContext(StoreContext);
+  
+  const onChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData(data => ({ ...data, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setshowsidebar(true);
-    onLogin(); // Call the parent function to hide the login modal
+    let newurl = url;
+    newurl += currentState === "login" ? "/api/user/login" : "/api/user/register";
+    
+    try {
+      const response = await axios.post(newurl, data);
+      if (response.data.success) {
+        settoken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+        setshowsidebar(true);
+        onLogin();
+      } else {
+        alert(response.data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Login/Registration error:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   const handleSidebarClose = () => {
@@ -20,18 +49,34 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-      <div className="login-modal"> {/* Updated class name */}
-        {!newu ? <h2>Login</h2> : <h2>Sign up</h2>}
+      <div className="login-modal">
+        <h2>{currentState}</h2>
         
-        <form onSubmit={handlesubmit}>
+        <form onSubmit={handleSubmit}>
+          {currentState !== "login" && 
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control one"
+                placeholder="Enter name"
+                name="name"
+                value={data.name}
+                onChange={onChange}
+                required
+              />
+            </div>
+          }
           <div className="form-group">
             <label>Email</label>
             <input
               type="email"
               className="form-control one"
               placeholder="Enter email"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              name="email"
+              value={data.email}
+              onChange={onChange}
+              required
             />
           </div>
           
@@ -40,22 +85,13 @@ const Login = ({ onLogin }) => {
             <input
               type="password"
               className="form-control"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setpassword(e.target.value)}
+              placeholder="Enter a strong password"
+              name="password"
+              value={data.password}
+              onChange={onChange}
+              required
             />
           </div>
-
-          {newu && (
-            <div className="form-group">
-              <label>Confirm Password</label>
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Confirm password"
-              />
-            </div>
-          )}
 
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id="termsCheck" />
@@ -65,21 +101,17 @@ const Login = ({ onLogin }) => {
           </div>
 
           <button type="submit" className="btn-login">
-            {newu ? 'Sign Up' : 'Login'}
+            {currentState === "login" ? "Login" : "Sign Up"}
           </button>
 
-          {!newu ? (
-            <p className="text-center">
-              Don't have an account?{' '}
-              <span
-                onClick={() => setnewu(true)}
-                style={{ cursor: 'pointer', color: 'blue' }}
-              >
-                Click here to Sign up
-              </span>
-            </p>
-          ) : null}
+          <p>
+            {currentState === "login"
+              ? <>Create a new Account? <span onClick={() => setCurrentState("Sign up")}>Click here</span></>
+              : <>Already have an Account? <span onClick={() => setCurrentState("login")}>Login here</span></>
+            }
+          </p>
         </form>
+
         {showsidebar && <Sidebar onClose={handleSidebarClose} />}
       </div>
     </div>

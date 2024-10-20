@@ -1,0 +1,82 @@
+/* CSS for Notice Form */
+.form-container {
+    width: 50%;
+    margin: 10vh;
+    padding: 20px;
+    border: 10px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* CSS for Notice Table */
+  .notice-section {
+    width: 90%;
+    margin: 50px auto;
+  }
+  
+  .notice-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .notice-table th,
+  .notice-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .notice-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .notice-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .notice-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notice-img {
+    width: 100px;
+    height: auto;
+  }
+  

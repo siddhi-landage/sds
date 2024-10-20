@@ -4,29 +4,28 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position:relative;
-  z-index:30;
-  /* border: 10px solid red; */
-  /* background-color: #f0f0f0; */
+  position: relative;
+  z-index: 30;
 }
 
 /* Modal (login box) styling */
 .login-modal {
   background-color: white;
-  filter : brightness(94%);
+  filter: brightness(94%);
   padding: 4vh;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  width:37vw;
+  width: 37vw;
   text-align: center;
+  animation: fadeIn 0.9s ease-in-out; /* Move animation here for better organization */
 }
 
 /* Form styling */
 .form-group {
-  margin:3vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  margin: 3vh;
+  display: flex;
+   /* Stack label and input vertically */
+  align-items: center;
 }
 
 .form-group label {
@@ -42,14 +41,12 @@
   border-radius: 4px;
 }
 
+/* Additional class for specific inputs */
 .form-control {
-   border:2px solid red;
-   margin-left :1vw;
+  border: 2px solid red;
+  margin-left: 1vw;
 }
-.form-control-one{
-  border:2px solid red;
-  margin-left :2.7vw;
-}
+
 /* Button styling */
 .btn-login {
   width: 100%;
@@ -59,6 +56,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
 .btn-login:hover {
@@ -68,17 +66,36 @@
 /* Checkbox styling */
 .form-check {
   margin-bottom: 15px;
+  display: flex; /* Align checkbox and label */
+  align-items: center;
+  justify-content : center;
+  
 }
 
 .form-check input {
   margin-right: 10px;
 }
 
+.form-check-input {
+    cursor:pointer;
+}
 /* Text center */
 .text-center {
   text-align: center;
 }
-
+form Button {
+  margin-bottom:2vh;
+}
+form span {
+  color : blue;
+  opacity: 0.8;
+}
+form span:hover{
+  color : blue;
+  opacity : 1;
+  cursor:pointer;
+}
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -88,8 +105,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.login-modal {
-  animation: fadeIn 0.9s ease-in-out;
 }

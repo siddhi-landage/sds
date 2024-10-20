@@ -7,5 +7,6 @@
     background-image:url('../../assets/coep hostel.jpg');
     background-size:cover;
     background-repeat:no-repeat;
+    /* border: 5px solid red; */
     z-index:0;
 }

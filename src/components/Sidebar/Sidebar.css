@@ -20,6 +20,13 @@
   transform: translateX(0); /* Ensure it's visible by default */
 }
 
+.sidebar .logout {
+   margin: 1vh;
+   padding: 2vh 2.5vh;
+   border : 1px solid black;
+   border-radius : 15px;
+   font-size :2.5vh;
+}
 /* Ensure sidebar is fully visible on screen */
 .cover.show .sidebar {
   transform: translateX(0); /* Reset translation to bring it into view */
@@ -33,3 +40,4 @@
   cursor: pointer; /* Change cursor on hover */
   margin-bottom: 10px; /* Space below close icon */
 }
+
