@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <div className='Contact' id='contact'>
        <div className='Intro'>
-          <h1> Our Team memebers:</h1>
+          <h1> Our Team members:</h1>
           <hr/>
        </div>
     <div className="workers-list">

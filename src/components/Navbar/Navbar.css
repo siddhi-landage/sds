@@ -7,14 +7,14 @@
     position: absolute;
     z-index: 1; 
     top:0;
-    left:0;Higher z-index to appear above the Header image
-    /* background-color: rgba(255, 255, 255, 0.8); Optional: Set a transparent background */
-   
+    left:0;
+    background-color: rgba(255, 255, 255, 0); !important 
 }
   
 .navbar img:hover {
   transform:translateY(-2px) scale(1.20);
 }
+
 .menu li.active, .menu li:hover {
    padding-bottom: 2px;
    border-bottom: 1.5px solid black;
@@ -36,6 +36,7 @@
    height:20vh;
    width:10vw;
 }
+
 .menu {
     padding-left:7vw;
     display:flex;
@@ -107,7 +108,7 @@
  }
  
 .load {
-   background-color : red;
+   /* background-color : red; */
    z-index :10;
    color:black;
    position:relative;

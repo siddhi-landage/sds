@@ -2,14 +2,14 @@ import React from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header.jsx'
 import Contact from '../../components/Contacts/Contact'
-import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar.jsx'
 
 const Home = () => {
   return (
     <div> 
+       <Navbar />
       <Header/>
       <Contact/>
-      <Footer/>
     </div>
   )
 }

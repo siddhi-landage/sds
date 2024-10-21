@@ -13,6 +13,8 @@ const Sidebar = ({ onClose }) => {
 
   const logout = () => {
       localStorage.removeItem("token");
+      settoken("");
+      navigate("/");
       alert("user logout done");
       onClose();
       // navigate("/");

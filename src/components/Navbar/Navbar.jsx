@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Login from '../Login/Login.jsx';
 import Sidebar from '../Sidebar/Sidebar.jsx'; // Make sure to import the Sidebar component
+import {Link , useNavigate} from 'react-router-dom';
 
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -16,8 +17,7 @@ const Navbar = () => {
     const timer = setTimeout(() => {
       console.log("Login will appear in 1 sec");
       setShowLogin(true);
-    }, 500);
-
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,13 +40,10 @@ const Navbar = () => {
     <>
       <div className='navbar'>
         <div className='nav-left'>
-          <img className='navbar-img' src={logo} alt="logo" />
+         <Link to='/'><img className='navbar-img' src={logo} alt="logo" /></Link> 
           <ul className='menu'>
             <li>Home</li>
-            <li> 
-              <a href='#contact'>Team</a>
-             </li>
-            <li>Notice Section</li>
+            <Link to='/Notice'><li>Notice Section</li></Link>
             <li>General Discussion</li>
           </ul>
         </div>
@@ -60,6 +57,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      
       {showLogin && <Login onLogin={handleLogin} />}
       {showSidebar && <Sidebar onClose={toggleSidebar} />} {/* Assuming you have a Sidebar component */}
     </>
