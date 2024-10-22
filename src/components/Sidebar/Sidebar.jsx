@@ -19,6 +19,7 @@ const Sidebar = ({ onClose }) => {
       onClose();
       // navigate("/");
   }
+  
   return (
     <div className='cover'>
       <div className='sidebar'>

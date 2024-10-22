@@ -8,7 +8,7 @@
                 "title": "Complaints",
                 "icon": "faPen", 
                 "isFontAwesome": true,
-                "path": "/complaint"
+                "path": "/Student"
             }
         ]
     },
@@ -21,7 +21,7 @@
                 "title": "Complaints",
                 "icon": "faPen", 
                 "isFontAwesome": true,
-                "path": "/worker/complaint"
+                "path": "/Worker"
             }
         ]
     },
@@ -30,6 +30,12 @@
         "icon": "faPerson", 
         "isFontAwesome": true,
         "childrens": [
+            {   
+                "title":"Notice Section",
+                "icon":"faClipboard",
+                "isFontAwesome":"true",
+                "path": "/notice"
+            },
             {
                 "title": "DashBoard",
                 "icon":"faChartLine",

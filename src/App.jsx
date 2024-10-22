@@ -8,6 +8,7 @@ import Home from '../src/pages/Home/Home.jsx';
 import StoreContextProvider from '../src/Context/StoreContext'; // Import your context provider
 import Footer from './components/Footer/Footer.jsx';
 import Student_comp from '../src/pages/Student_comp/Student_comp.jsx';
+import Worker_comp from './pages/Worker_comp/Worker_comp.jsx';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               <Route path='/Notice' element={<Notice/>} />
               <Route path='/General' element={<General/>} />
               <Route path='/Student' element={<Student_comp/>}/>
+              <Route path='/Worker'  element={<Worker_comp/>}/>
             </Routes>
           <Footer/>
         </div>

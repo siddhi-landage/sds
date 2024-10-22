@@ -16,10 +16,13 @@
     justify-content: space-between;
 }
 
+.sidebar-title span {
+    padding-right : 1vw;
+    /* border: 1ps solid red; */
+}
 .sidebar-title span i{
     display: inline-block;
     width: 1.5em;
-    border: 1ps solid red;
 }
 .sidebar-title .toggle-btn{
     cursor: pointer;
@@ -40,9 +43,11 @@
     max-height :500px;
 }
   
-.sidebar-item.plain{
+.sidebar-item .plain{
     color: black;
     text-decoration: none;
+    display:flex;
+    gap:1vw;
 }
 .sidebar-item.plain:hover{
     text-decoration: underline;

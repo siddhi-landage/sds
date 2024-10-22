@@ -43,7 +43,7 @@ const Navbar = () => {
          <Link to='/'><img className='navbar-img' src={logo} alt="logo" /></Link> 
           <ul className='menu'>
             <li>Home</li>
-            <Link to='/Notice'><li>Notice Section</li></Link>
+            <Link to='/Notice'><li>Notice Board</li></Link>
             <li>General Discussion</li>
           </ul>
         </div>
