@@ -2,53 +2,105 @@
 .content {
     text-align: center;
     margin-top: 20px;
+    width:50vw;
+    /* border: 2px solid red; */
+    margin-left:auto;
+    margin-right:auto;
+    padding: 2vh;
   }
   
-  .add-complaint-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .add-complaint-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .complaint-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .complaint-form label {
-    margin: 10px 0;
-  }
-  
-  .complaint-form input,
-  .complaint-form textarea {
+.flex-col {
+     /* border:1px solid black; */
+     display:flex;
+     flex-direction:column;
+    padding:1vw;
+}
+
+.add-img-upload.flex-col {
+    display:flex;
+    justify-content:flex-start;
+    align-items :center;
+    /* border: 2px solid red; */
+}
+
+.add-Room input , .add-your-name input {
+    margin-left : 6vw;
+}
+.add-img-upload img {
+    width:18vw;
+    height:13vh;
+    margin-left:5vw;
+}
+
+.add-pro-name  {
+   width:max(40% , 280px);
+
+}
+.pro-desc {
+    width:80%
+}
+
+.pro-desc  textarea{
+    width:40%;
+    margin-left:0.6vw;
+}
+
+.add-pro-name  input , .pro-desc  textarea{
     padding: 10px;
-    width: 300px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .complaint-form button {
-    background-color: #28a745;
+}
+
+.add-category-price {
+    display:flex;
+    gap:30px;
+ }
+.add-category-price  select {
+    margin-top: 10px;
+}
+
+.add-category-price  select, .add-category-price input {
+    max-width: 120px;
+    padding:10px;
+}
+
+.add-btn{
+    max-width:120px;
+    border:none;
+    padding:10px;
+    background-color:#0D92F4 ;
+    color:white;
+    cursor: pointer;
+    margin-top: 3vh;
+    margin-left : auto;
+    margin-right:auto;
+    opacity:0.9;
+    border-radius : 7px;
+    padding:10px 20px;
+
+} 
+
+.add-complaint-button{
+    background-color: #0D92F4 ;
+    opacity:0.8;
     color: white;
-    border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border:none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 7px;
+  }
+
+  .add-complaint-button:hover  , .add-btn:hover{
+    background-color: #0a7bcf;
   }
   
-  .complaint-form button:hover {
-    background-color: #218838;
-  }
-  
+.add-your-pos {
+    margin-left:2.2vw;
+}
+
+.flex-row {
+    /* border: 1px solid black; */
+    display:flex;
+    justify-content:space-evenly;
+    margin: 1.5vh;
+}
+
