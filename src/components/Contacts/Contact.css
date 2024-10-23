@@ -1,7 +1,7 @@
 .Contact {
     display:flex;
     height: auto;
-    margin-top:100vh;
+    /* margin-top:100vh; */
     /* border: 5px solid black; */
     flex-direction:column;
     position:relative;

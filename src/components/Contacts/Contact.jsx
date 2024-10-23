@@ -12,9 +12,11 @@ const workers = [
   { name: 'Mark Lee', role: 'Cleaner', img:photo, contactno:"+12345678" , email:"workcoep.com" , rating: 7 },
 ]
 
-const Contact = () => {
+const Contact = ( { showLogin , setShowLogin}) => {
+  console.log("showlogin status in conatact page;");
+  console.log(showLogin);
   return (
-    <div className='Contact' id='contact'>
+    <div className='Contact' id='contact' style={{marginTop :showLogin ? '0vh' : '100vh'} }>
        <div className='Intro'>
           <h1> Our Team members:</h1>
           <hr/>

@@ -1,5 +1,5 @@
 // App.jsx
-import React from 'react';
+import React , {useState }from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Navbar from '../src/components/Navbar/Navbar.jsx';
 import Notice from '../src/pages/Notice/Notice.jsx';
@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Student_comp from '../src/pages/Student_comp/Student_comp.jsx';
 import Worker_comp from './pages/Worker_comp/Worker_comp.jsx';
 
-const App = () => {
+const App = () => { 
   return (
     <StoreContextProvider>
         <div className='app'>

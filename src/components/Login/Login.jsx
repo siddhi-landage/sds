@@ -14,7 +14,7 @@ const Login = ({ onLogin }) => {
     password: ""
   });
 
-  const { url, settoken } = useContext(StoreContext);
+  const { url, token , settoken } = useContext(StoreContext);
   
   const onChange = (event) => {
     const name = event.target.name;
@@ -92,18 +92,15 @@ const Login = ({ onLogin }) => {
               required
             />
           </div>
-
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id="termsCheck" />
             <label className="form-check-label" htmlFor="termsCheck">
               By continuing, I agree to the terms of use & conditions
             </label>
           </div>
-
           <button type="submit" className="btn-login">
             {currentState === "login" ? "Login" : "Sign Up"}
           </button>
-
           <p>
             {currentState === "login"
               ? <>Create a new Account? <span onClick={() => setCurrentState("Sign up")}>Click here</span></>
@@ -111,7 +108,6 @@ const Login = ({ onLogin }) => {
             }
           </p>
         </form>
-
         {showsidebar && <Sidebar onClose={handleSidebarClose} />}
       </div>
     </div>

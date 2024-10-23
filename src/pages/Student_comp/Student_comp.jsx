@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar_2 from '../../components/Navbar_2/Navbar_2';
-import './Student_comp.css';
+import './Student_comp';
 import profile from '../../../../Warden/src/assets/profile.jpeg';
 import upl_img from '../../../../Warden/src/assets/upload_area.png';
 import { ToastContainer } from 'react-toastify';
@@ -75,7 +75,7 @@ function Student_comp() {
         </button>
         {showForm && (
           <form className="flex-col" onSubmit={onSubmit}>
-            <div className="add-pdf-upload flex-row">
+            <div className="add-img-upload flex-row">
               <p>Upload Image</p>
               <label htmlFor="image">
                 <img src={image ? URL.createObjectURL(image) : upl_img} alt="" />

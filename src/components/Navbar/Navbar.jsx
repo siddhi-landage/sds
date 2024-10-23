@@ -1,53 +1,78 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.css';
 import logo from '../../assets/coep-removebg-preview.png';
 import bellicon from '../../assets/bell.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Login from '../Login/Login.jsx';
-import Sidebar from '../Sidebar/Sidebar.jsx'; // Make sure to import the Sidebar component
-import {Link , useNavigate} from 'react-router-dom';
+import Sidebar from '../Sidebar/Sidebar.jsx';
+import { Link } from 'react-router-dom';
+import { StoreContext } from '../../Context/StoreContext.jsx';
+import { toast, ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
-const Navbar = () => {
-  const [showLogin, setShowLogin] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false); // State for sidebar visibility
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+// Properly destructuring props
+const Navbar = ({ showLogin, setShowLogin }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const { token } = useContext(StoreContext); // Access token from context
 
+  // Check for token on component mount or refresh
   useEffect(() => {
-    const timer = setTimeout(() => {
-      console.log("Login will appear in 1 sec");
-      setShowLogin(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    const storedToken = localStorage.getItem('token'); // Retrieve token from localStorage
+    if (storedToken) {
+      setIsLoggedIn(true); // Set user as logged in
+      setShowLogin(false); // Hide login form
+    }
+  }, [token]);
 
-  useEffect(() => {
-    console.log('showLogin state has changed:', showLogin);
-  }, [showLogin]);
-
+  // Function to toggle sidebar
   const toggleSidebar = () => {
     if (isLoggedIn) {
-      setShowSidebar((prev) => !prev); // Only toggle if logged in
+      setShowSidebar((prev) => !prev);
     }
   };
 
+  // Show login form when login button is clicked
+  const handleLoginButtonClick = () => {
+    if (isLoggedIn) {
+      // Log out logic here
+      localStorage.removeItem('token');
+      // settoken("");
+      // navigate("/"); // Remove token from localStorage
+      setIsLoggedIn(false); // Set user as logged out
+      toast.success("You have logged out successfully!"); // Show Toastify message
+    } else {
+      setShowLogin(true); // Show login form
+    }
+  };
+
+  // Handle login success
   const handleLogin = () => {
-    setShowLogin(false);
-    setIsLoggedIn(true); // Update the login state on successful login
+    setShowLogin(false); // Hide login form after successful login
+    setIsLoggedIn(true); // Set user as logged in
+    localStorage.setItem('token', 'dummy_token'); // Store token in localStorage (use real token from backend)
+    toast.success("Login successful!"); // Show Toastify message
   };
 
   return (
     <>
       <div className='navbar'>
         <div className='nav-left'>
-         <Link to='/'><img className='navbar-img' src={logo} alt="logo" /></Link> 
+          <Link to='/'><img className='navbar-img' src={logo} alt="logo" /></Link>
+        </div>
+        <div className='nav-mid'>
           <ul className='menu'>
             <li>Home</li>
             <Link to='/Notice'><li>Notice Board</li></Link>
-            <li>General Discussion</li>
           </ul>
         </div>
         <div className="navbar-right">
+          {/* Login/Logout Button */}
+          <button type="button" className="add-btn" onClick={handleLoginButtonClick}>
+            {isLoggedIn ? 'Logout' : 'Login'} {/* Show Logout if logged in, else Login */}
+          </button>
+
           <div className="bell-icon">
             <img src={bellicon} alt="bell" />
             <div className="dot"></div>
@@ -57,9 +82,15 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
+      {/* Show Login component if showLogin is true */}
       {showLogin && <Login onLogin={handleLogin} />}
-      {showSidebar && <Sidebar onClose={toggleSidebar} />} {/* Assuming you have a Sidebar component */}
+
+      {/* Show Sidebar when logged in */}
+      {isLoggedIn && showSidebar && <Sidebar onClose={toggleSidebar} />}
+
+      {/* Toastify Container */}
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </>
   );
 };

@@ -6,11 +6,15 @@
   height: 100vh;
   position: relative;
   z-index: 30;
+  /* border:6px solid red; */
 }
 
 /* Modal (login box) styling */
 .login-modal {
   background-color: white;
+  opacity:1;
+  position:absolute;
+  z-index : 50;
   filter: brightness(94%);
   padding: 4vh;
   border-radius: 8px;
@@ -105,4 +109,19 @@ form span:hover{
     opacity: 1;
     transform: translateY(0);
   }
+}
+.add-btn{
+  max-width:120px;
+  border:none;
+  padding:10px;
+  background-color:#0D92F4 ;
+  color:white;
+  cursor: pointer;
+  margin-left : auto;
+  margin-right:auto;
+  opacity:0.9;
+  border-radius : 7px;
+  padding:7vh 10vw;
+  margin-top; auto;
+  margin-bottom:auto;
 }
