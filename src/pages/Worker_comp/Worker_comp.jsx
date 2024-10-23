@@ -47,7 +47,7 @@ const Worker_comp = () => {
             name: '',
             Room: '',
             description: '',
-            category: '',
+            category: 'clean',
             person: ''
           });
           setImage(null);
@@ -73,7 +73,7 @@ const Worker_comp = () => {
         </button>
         {showForm && (
           <form className="flex-col" onSubmit={onSubmit}>
-            <div className="add-pdf-upload flex-row">
+            <div className="add-img-upload flex-row">
               <p>Upload Image</p>
               <label htmlFor="image">
                 <img src={image ? URL.createObjectURL(image) : upl_img} alt="" />

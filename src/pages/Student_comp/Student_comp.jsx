@@ -15,7 +15,7 @@ function Student_comp() {
     name: '',
     Room: '',
     description: '',
-    category: '',
+    category: 'clean',
     person: ''
   });
 

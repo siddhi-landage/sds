@@ -1,4 +1,3 @@
-
 .content {
     text-align: center;
     margin-top: 20px;
@@ -26,7 +25,7 @@
 .add-Room input , .add-your-name input {
     margin-left : 6vw;
 }
-.add-img-upload img {
+.add-img-upload  img{
     width:18vw;
     height:13vh;
     margin-left:5vw;

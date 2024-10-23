@@ -47,6 +47,10 @@ const Navbar = ({ showLogin, setShowLogin }) => {
     }
   };
 
+  const handleClick = () => {
+    window.location.href = "http://localhost:5174";
+  }
+
   // Handle login success
   const handleLogin = () => {
     setShowLogin(false); // Hide login form after successful login
@@ -65,7 +69,8 @@ const Navbar = ({ showLogin, setShowLogin }) => {
           <ul className='menu'>
             <li>Home</li>
             <Link to='/Notice'><li>Notice Board</li></Link>
-          </ul>
+              {/* <h2 onClick={handleClick}> Warden </h2> */}
+            </ul>
         </div>
         <div className="navbar-right">
           {/* Login/Logout Button */}
