@@ -1,8 +1,7 @@
 .Contact {
     display:flex;
     height: auto;
-    /* margin-top:100vh; */
-    /* border: 5px solid black; */
+    /* border: 1px solid black; */
     flex-direction:column;
     position:relative;
     z-index:1;
@@ -17,6 +16,11 @@
     font-size:6vh;
     font-weight:300;
     color:black;
+    margin-top : 2vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,0.9752275910364145) 0%, rgba(196,42,99,1) 29%, rgba(253,29,29,1) 60%, rgba(252,176,69,0.908000700280112) 100%);
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
 }
 .workers-list {
     margin-top: 3vh;

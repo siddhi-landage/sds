@@ -1,18 +1,45 @@
 .circle-rate {
-    /* border: 2px solid red; */
     border-radius: 50%;
-    padding: 5px; /* Increase/decrease padding for circle thickness */
-    width: 50px;  /* Set width */
-    height: 50px; /* Set height */
+    padding: 5%;
+    width: 5vw;  
+    height: 5vw; 
+    max-width: 100px; 
+    max-height: 100px; 
     box-shadow: 0 0 1px 1px rgba(255, 0, 0);
+    display: flex; 
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
 }
 
 .CircularProgressbar-text {
-    font-size: 5vw; /* Adjust font size */
+    font-size: 4vw; /* Font size based on viewport width */
     font-weight: 500;
     fill: black;
 }
 
 .CircularProgressbar-trail {
     stroke: transparent;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .circle-rate {
+        width: 10vw;  /* Increase size for medium screens */
+        height: 10vw; /* Increase size for medium screens */
+    }
+
+    .CircularProgressbar-text {
+        font-size: 5vw; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-rate {
+        width: 20vw;  /* Further increase size for small screens */
+        height: 20vw; /* Further increase size for small screens */
+    }
+
+    .CircularProgressbar-text {
+        font-size: 6vw; /* Adjust font size for small screens */
+    }
 }

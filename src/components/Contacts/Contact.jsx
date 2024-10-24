@@ -1,6 +1,6 @@
 import React from 'react'
 import './Contact.css'
-import photo from '../../assets/Premium Vector _ Cleaning Service Logo Template Design Vector, Emblem, Design Concept, Creative Symbol, Icon.jpeg'
+import photo from '../../assets/worker.png'
 import Card from '../Card/Card'
 
 const workers = [

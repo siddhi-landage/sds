@@ -1,38 +1,105 @@
 .SingleCard {
-    display:flex;
-    flex-direction:column;
-    padding-top:3vh;
-    align-items:center;
-    gap : 1.5vh;
-    height:50vh;
-    width:25vw;
-    border-radius:25px;
-    border:1px solid black;
-    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-top: 3vh;
+    align-items: center;
+    gap: 1.5vh;
+    height: 60vh;
+    width: 25vw;
+    border-radius:50px;
+    /* border: 1px solid black; */
+    position: relative;
+    background-color:rgba(202, 244, 255, 0.6);
 }
 
 .SingleCard .workerimg {
-    height:20vh;
-    width:20vh;
-    border-radius:50%;
-    object-fit:cover;
-    border:1px solid red;
-
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 1px solid red; */
 }
 
 .Info {
-   display:flex;
-   height: 25vh;
-   width: 23vw;
-   justify-content : center;
-   align-items : center;
-   flex-direction : row;
-   /* border:1px solid black; */
-   gap : 1vw;
+    display: flex;
+    height: 25vh;
+    /* border:2px solid black; */
+    width: 23vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;
 }
 
 .Info .other {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     gap: 0.6vh;
+}
+@media (max-width: 768px) {
+    .SingleCard {
+        height: 60vh;
+        width: 40vw;
+        padding-top: 2vh;
+    }
+
+    .SingleCard .workerimg {
+        height: 15vh;
+        width: 15vh;
+    }
+
+    .Info {
+        height: 30vh;
+        width: 35vw;
+        flex-direction:row;
+        gap: 1vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .SingleCard {
+        height: 70vh;
+        width: 90vw;
+        padding-top: 1vh;
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    .SingleCard .workerimg {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .Info {
+        height: auto;
+        width: 90vw;
+        align-items: center;
+        gap: 1.5vh;
+    }
+
+    .Info .other {
+        gap: 1vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .SingleCard {
+        height: 80vh;
+        width: 95vw;
+        padding-top: 1vh;
+    }
+
+    .SingleCard .workerimg {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .Info {
+        gap: 2vh;
+    }
+
+    .Info .other {
+        gap: 1.2vh;
+    }
 }
