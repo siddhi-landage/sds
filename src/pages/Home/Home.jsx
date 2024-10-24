@@ -6,10 +6,11 @@ import Navbar from '../../components/Navbar/Navbar.jsx'
 
 const Home = () => {
   const [ showLogin , setShowLogin ] = useState(false);
+
   return (
     <div> 
        <Navbar showLogin = {showLogin} setShowLogin={setShowLogin}/>
-      <Header/>
+      <Header showlogin={showLogin} setShowLogin={setShowLogin} />
       <Contact showLogin={showLogin} setShowLogin={setShowLogin}/>
     </div>
   )

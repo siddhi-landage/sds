@@ -1,0 +1,27 @@
+.text-container {
+    text-align: center;
+    font-family: 'Times New Roman', serif; /* Match the font style */
+    color: rgb(51, 147, 213); /* Fallback color in case the gradient doesn't load */
+    position: absolute;
+    z-index: 5;
+    right: 3vw;
+    bottom: 0vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container h1 {
+    font-size: 3.2rem; /* Adjust font size as needed */
+    margin: 10px 0; /* Add margin between lines */
+    text-transform: uppercase; /* All uppercase letters */
+    letter-spacing: 2px; /* Add spacing between letters for better readability */
+    
+    /* Gradient on text */
+    background: linear-gradient(90deg, rgba(51,147,213,1) 27%, rgba(19,164,195,0.661) 58%, rgba(0,212,255,1) 86%);
+    -webkit-background-clip: text;  /* Clip background to the text */
+    -webkit-text-fill-color: transparent; /* Make the actual text transparent to show the background */
+    background-clip: text; /* Required for Firefox */
+    text-fill-color: transparent; /* Required for Firefox */
+}

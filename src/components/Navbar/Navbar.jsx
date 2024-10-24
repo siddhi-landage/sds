@@ -67,7 +67,7 @@ const Navbar = ({ showLogin, setShowLogin }) => {
         </div>
         <div className='nav-mid'>
           <ul className='menu'>
-            <li>Home</li>
+            <Link to='/'><li>Home</li></Link>
             <Link to='/Notice'><li>Notice Board</li></Link>
               {/* <h2 onClick={handleClick}> Warden </h2> */}
             </ul>

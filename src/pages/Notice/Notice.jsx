@@ -24,7 +24,7 @@ const Notice = () => {
               <td>{index + 1}</td>
               <td>{new Date(notice.Date).toLocaleDateString()}</td>
               <td>{notice.subject}</td>
-              <td><img src={`http://localhost:4000/images/${notice.image}`} alt={notice.subject} className="notice-img" /></td>
+              <td><img src={`http://localhost:4000/notice_img/${notice.image}`} alt={notice.subject} className="notice-img" /></td>
             </tr>
           ))}
         </tbody>

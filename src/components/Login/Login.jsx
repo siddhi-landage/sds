@@ -7,7 +7,7 @@ import axios from "axios";
 const Login = ({ onLogin }) => {
   const [showsidebar, setshowsidebar] = useState(false);
   const [currentState, setCurrentState] = useState("login");
-
+   
   const [data, setData] = useState({
     name: "",
     email: "",

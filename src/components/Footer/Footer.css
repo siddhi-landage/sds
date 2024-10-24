@@ -1,11 +1,12 @@
 /* Footer.css */
 .footer {
-    background-color:#BC9F8B;
+    background-color:#AB886D;
     /* border:2px solid black; */
     color: #fff;
     position:relative;
     padding: 40px 20px;
     margin-top:5vh;
+    width:100%;
     font-family: Arial, sans-serif;
 }
   
@@ -41,7 +42,6 @@
     font-size: 0.9rem;
     margin-top: 10px;
     line-height: 1.5;
-    
 }
   
 .footer-heading {
@@ -72,7 +72,7 @@
   .social-icons{
     padding-top:2vh;
     display:flex;
-    hustify-content:center;
+    justify-content:center;
     gap:1.2rem;
     font-size:2rem;
   }
@@ -93,3 +93,54 @@
     align-items:center;
   }
   
+  @media (max-width:615px) {
+    .footer-container{
+        display: flex;
+        flex-direction :column;
+        gap:35px;
+    }
+    .footer {
+       width:110%:
+    }
+    .footer-text {
+      font-size: 0.8rem;
+      margin-top: 8px;
+      line-height: 1.1;
+      padding:1vh;
+     }
+     .social-icons{
+      padding-top:2vh;
+      gap:1.2rem;
+      font-size:1.7rem;
+    }
+    .copyright {
+        text-align:center;
+    }
+}
+
+@media (max-width:450px) {
+  .footer-container{
+      gap:20px;
+  }
+  .footer{
+     width:120%;
+  }
+  .social-icons{
+    padding-top:2vh;
+    gap:1rem;
+    font-size:1.5rem;
+  }
+  .copyright {
+      text-align:center;
+  }
+}
+
+
+@media (max-width:340px) {
+  .footer-container{
+      gap:20px;
+  }
+  .footer{
+     width:150%;
+  }
+}

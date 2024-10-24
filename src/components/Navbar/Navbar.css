@@ -15,15 +15,33 @@
   transform:translateY(-2px) scale(1.20);
 }
 
-.menu li.active, .menu li:hover {
+.navbar img {
+   filter: hue-rotate(90deg);
+}
+.menu li { 
+   color : #0D92F4;
+   cursor:pointer;
+}
+.menu li {
+   position: relative;
    padding-bottom: 2px;
-   border-bottom: 1.5px solid black;
 }
 
-/* Additional rule to target the active state */
-.menu li.active {
-   color: tomato;
+.menu li::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0;  /* Start with 0 width */
+   height: 1.5px;
+   background: linear-gradient(90deg, rgba(51,147,213,1) 16%, rgba(19,164,195,1) 42%, rgba(0,212,255,1) 85%);
+   transition: width 0.4s ease;  /* Animation duration */
 }
+
+.menu li:hover::after, .menu li.active::after {
+   width: 100%;  /* Expand to full width on hover */
+}
+
 
 .nav-left {
    display:flex;
@@ -123,7 +141,8 @@
    }
 }
 .navbar-right .add-btn{
-   background-color:#0D92E4 ;
+   background: rgb(51,147,213);
+   background: linear-gradient(90deg, rgba(51,147,213,1) 16%, rgba(19,164,195,1) 42%, rgba(0,212,255,1) 85%);
    color:white;
    cursor: pointer;
    margin-bottom:2vh;
@@ -133,3 +152,4 @@
    margin-top; auto;
    margin-bottom:auto;
  }
+
