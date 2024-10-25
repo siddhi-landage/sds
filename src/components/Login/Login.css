@@ -125,3 +125,7 @@ form span:hover{
   margin-top; auto;
   margin-bottom:auto;
 }
+
+.google-login {
+  margin-bottom :2vh;
+}

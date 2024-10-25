@@ -24,24 +24,5 @@
                 "path": "/Worker"
             }
         ]
-    },
-    {
-        "title": "Worden",
-        "icon": "faPerson", 
-        "isFontAwesome": true,
-        "childrens": [
-            {   
-                "title":"Notice Section",
-                "icon":"faClipboard",
-                "isFontAwesome":"true",
-                "path": "/notice"
-            },
-            {
-                "title": "DashBoard",
-                "icon":"faChartLine",
-                "isFontAwesome":"true",
-                "path": "/DashBoard"
-            }
-        ]
     }
 ]

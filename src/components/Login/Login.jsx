@@ -76,12 +76,6 @@ const Login = ({ onLogin }) => {
     <div className="login-page">
       <div className="login-modal">
         <h2>{currentState}</h2>
-        <div className="google-login">
-          <GoogleLogin
-            onSuccess={handleGoogleLoginSuccess}
-            onError={handleGoogleLoginFailure}
-          />
-        </div>
         
         <form onSubmit={handleSubmit}>
           {currentState !== "login" && 
@@ -132,6 +126,12 @@ const Login = ({ onLogin }) => {
           <button type="submit" className="btn-login">
             {currentState === "login" ? "Login" : "Sign Up"}
           </button>
+          <div className="google-login">
+          <GoogleLogin
+            onSuccess={handleGoogleLoginSuccess}
+            onError={handleGoogleLoginFailure}
+          />
+        </div>
           <p>
             {currentState === "login"
               ? <>Create a new Account? <span onClick={() => setCurrentState("Sign up")}>Click here</span></>
