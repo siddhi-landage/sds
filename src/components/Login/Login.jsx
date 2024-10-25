@@ -3,6 +3,7 @@ import './Login.css';
 import Sidebar from '../Sidebar/Sidebar.jsx';
 import { StoreContext } from '../../Context/StoreContext.jsx';
 import axios from "axios";
+import { GoogleLogin } from '@react-oauth/google';
 
 const Login = ({ onLogin }) => {
   const [showsidebar, setshowsidebar] = useState(false);
@@ -43,6 +44,30 @@ const Login = ({ onLogin }) => {
     }
   };
 
+  const handleGoogleLoginSuccess = async (credentialResponse) => {
+    console.log("Google Login Success:", credentialResponse);
+    const token = credentialResponse.credential;
+
+    try {
+      const response = await axios.post(`${url}/api/user/google-login`, { token });
+      if (response.data.success) {
+        settoken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+        setshowsidebar(true);
+        onLogin();
+      } else {
+        alert(response.data.message || "Google Login failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Google Login error:", error);
+      alert("An error occurred during Google Login. Please try again.");
+    }
+  };
+
+  const handleGoogleLoginFailure = () => {
+    alert("Google Login Failed");
+  };
+
   const handleSidebarClose = () => {
     setshowsidebar(false);
   };
@@ -51,6 +76,12 @@ const Login = ({ onLogin }) => {
     <div className="login-page">
       <div className="login-modal">
         <h2>{currentState}</h2>
+        <div className="google-login">
+          <GoogleLogin
+            onSuccess={handleGoogleLoginSuccess}
+            onError={handleGoogleLoginFailure}
+          />
+        </div>
         
         <form onSubmit={handleSubmit}>
           {currentState !== "login" && 

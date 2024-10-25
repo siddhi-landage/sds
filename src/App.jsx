@@ -9,9 +9,11 @@ import StoreContextProvider from '../src/Context/StoreContext'; // Import your c
 import Footer from './components/Footer/Footer.jsx';
 import Student_comp from '../src/pages/Student_comp/Student_comp.jsx';
 import Worker_comp from './pages/Worker_comp/Worker_comp.jsx';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const App = () => { 
   return (
+  <GoogleOAuthProvider clientId="121631675823-qh00gv4pq8uks1bsvl7om61altuhvb7h.apps.googleusercontent.com">
     <StoreContextProvider>
         <div className='app'>
             <Routes>
@@ -24,7 +26,8 @@ const App = () => {
           <Footer/>
         </div>
     </StoreContextProvider>
+   </GoogleOAuthProvider>
   );
-}
+};
 
 export default App;
