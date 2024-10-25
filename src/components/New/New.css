@@ -41,7 +41,7 @@
         margin-bottom:20vh;
     }
 }
-@media(max-width:800px) {
+@media(max-width:850px) {
     .text-container h1{
         opacity:0;
     }

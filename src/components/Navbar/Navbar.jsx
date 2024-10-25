@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.css';
 import logo from '../../assets/coep-removebg-preview.png';
-import bellicon from '../../assets/bell.jpeg';
+import bellicon from '../../assets/bell-removebg-preview.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Login from '../Login/Login.jsx';
@@ -50,13 +50,12 @@ const Navbar = ({ showLogin, setShowLogin }) => {
   const handleClick = () => {
     window.location.href = "http://localhost:5174";
   }
-
-  // Handle login success
+  
   const handleLogin = () => {
-    setShowLogin(false); // Hide login form after successful login
-    setIsLoggedIn(true); // Set user as logged in
-    localStorage.setItem('token', 'dummy_token'); // Store token in localStorage (use real token from backend)
-    toast.success("Login successful!"); // Show Toastify message
+    setShowLogin(false); 
+    setIsLoggedIn(true);
+    localStorage.setItem('token', 'dummy_token'); 
+    toast.success("Login successful!"); 
   };
 
   return (

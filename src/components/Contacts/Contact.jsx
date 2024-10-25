@@ -8,8 +8,8 @@ const workers = [
   { name: 'Jane Smith', role: 'Electrician', img:photo, contactno:"+12345678"  ,email:"workcoep.com" , rating: 3 },
   { name: 'Mark Lee', role: 'Carpenter', img:photo, contactno:"+12345678", email:"workcoep.com", rating: 5 },
   { name: 'John Doe', role: 'Cleaner', img:photo, contactno:"+12345678", email:"workcoep.com", rating: 9},
-  { name: 'Jane Smith', role: 'Cleaner', img:photo, contactno:"+12345678" ,email:"workcoep.com", rating: 5},
-  { name: 'Mark Lee', role: 'Cleaner', img:photo, contactno:"+12345678" , email:"workcoep.com" , rating: 7 },
+  { name: 'Jane Smith', role: 'Cleaner', img:photo, contactno:"+12345678" ,email:"workcoep.com", rating: 6},
+  { name: 'Mark Lee', role: 'Cleaner', img:photo, contactno:"+12345678" , email:"workcoep.com" , rating: 4 },
 ]
 
 const Contact = ( { showLogin , setShowLogin}) => {
