@@ -3,7 +3,7 @@
     text-align: center;
     margin-top: 20px;
     width:50vw;
-    /* border: 2px solid red;         */
+    /* border: 2px solid red;*/
     margin-left:auto;
     margin-right:auto;
     padding: 2vh;
@@ -95,3 +95,13 @@
     margin: 1.5vh;
 }
 
+
+@media(max-width:570px) {
+    .add-Room input , .add-your-name input {
+        margin-left : 2vw;
+    }
+    .add-complaint-button {
+        padding:8px 12px;
+        border:2px solid red;
+    }
+}
